@@ -1,0 +1,8 @@
+#!/bin/bash -eu
+readonly RUBY_VERSION=3.2
+
+docker run -it --rm \
+  -v $(pwd):/usr/src/app \
+  -w /usr/src/app \
+  ruby:$RUBY_VERSION \
+  /bin/bash -c "ruby script.rb"
